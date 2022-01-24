@@ -1,0 +1,300 @@
+Additionally, for --ovc=libvpx:
+  --ovcopts=lag-in-frames=<int>               Number of frames to look ahead for alternate reference frame selection
+  --ovcopts=arnr-maxframes=<int>              altref noise reduction max frame count
+  --ovcopts=arnr-strength=<int>               altref noise reduction filter strength
+  --ovcopts=arnr-type=<int>                   altref noise reduction filter type
+              [+-]backward
+              [+-]forward
+              [+-]centered
+  --ovcopts=tune=<int>                        Tune the encoding to a specific scenario
+              [+-]psnr
+              [+-]ssim
+  --ovcopts=deadline=<int>                    Time to spend encoding, in microseconds.
+              [+-]best
+              [+-]good
+              [+-]realtime
+  --ovcopts=error-resilient=<flags>           Error resilience configuration
+              [+-]default                     Improve resiliency against losses of whole frames
+              [+-]partitions                  The frame partitions are independently decodable by the bool decoder, meaning that partitions can be decoded even though earlier partitions have been lost. Note that intra prediction is still done over the partition boundary.
+  --ovcopts=max-intra-rate=<int>              Maximum I-frame bitrate (pct) 0=unlimited
+  --ovcopts=crf=<int>                         Select the quality for constant quality mode
+  --ovcopts=static-thresh=<int>               A change threshold on blocks below which they will be skipped by the encoder
+  --ovcopts=drop-threshold=<int>              Frame drop threshold
+  --ovcopts=noise-sensitivity=<int>           Noise sensitivity
+  --ovcopts=undershoot-pct=<int>              Datarate undershoot (min) target (%)
+  --ovcopts=overshoot-pct=<int>               Datarate overshoot (max) target (%)
+  --ovcopts=ts-parameters                     Temporal scaling configuration using a :-separated list of key=value parameters
+  --ovcopts=auto-alt-ref=<int>                Enable use of alternate reference frames (2-pass only)
+  --ovcopts=cpu-used=<int>                    Quality/Speed ratio modifier
+  --ovcopts=speed=<int>
+  --ovcopts=quality=<int>
+              [+-]best
+              [+-]good
+              [+-]realtime
+  --ovcopts=vp8flags=<flags>
+              [+-]error_resilient             enable error resilience
+              [+-]altref                      enable use of alternate reference frames (VP8/2-pass only)
+  --ovcopts=arnr_max_frames=<int>             altref noise reduction max frame count
+  --ovcopts=arnr_strength=<int>               altref noise reduction filter strength
+  --ovcopts=arnr_type=<int>                   altref noise reduction filter type
+  --ovcopts=rc_lookahead=<int>                Number of frames to look ahead for alternate reference frame selection
+  --ovcopts=sharpness=<int>                   Increase sharpness at the expense of lower PSNR
+Additionally, for --ovc=libvpx-vp9:
+  --ovcopts=lag-in-frames=<int>               Number of frames to look ahead for alternate reference frame selection
+  --ovcopts=arnr-maxframes=<int>              altref noise reduction max frame count
+  --ovcopts=arnr-strength=<int>               altref noise reduction filter strength
+  --ovcopts=arnr-type=<int>                   altref noise reduction filter type
+              [+-]backward
+              [+-]forward
+              [+-]centered
+  --ovcopts=tune=<int>                        Tune the encoding to a specific scenario
+              [+-]psnr
+              [+-]ssim
+  --ovcopts=deadline=<int>                    Time to spend encoding, in microseconds.
+              [+-]best
+              [+-]good
+              [+-]realtime
+  --ovcopts=error-resilient=<flags>           Error resilience configuration
+              [+-]default                     Improve resiliency against losses of whole frames
+              [+-]partitions                  The frame partitions are independently decodable by the bool decoder, meaning that partitions can be decoded even though earlier partitions have been lost. Note that intra prediction is still done over the partition boundary.
+  --ovcopts=max-intra-rate=<int>              Maximum I-frame bitrate (pct) 0=unlimited
+  --ovcopts=crf=<int>                         Select the quality for constant quality mode
+  --ovcopts=static-thresh=<int>               A change threshold on blocks below which they will be skipped by the encoder
+  --ovcopts=drop-threshold=<int>              Frame drop threshold
+  --ovcopts=noise-sensitivity=<int>           Noise sensitivity
+  --ovcopts=undershoot-pct=<int>              Datarate undershoot (min) target (%)
+  --ovcopts=overshoot-pct=<int>               Datarate overshoot (max) target (%)
+  --ovcopts=ts-parameters                     Temporal scaling configuration using a :-separated list of key=value parameters
+  --ovcopts=auto-alt-ref=<int>                Enable use of alternate reference frames (2-pass only)
+  --ovcopts=cpu-used=<int>                    Quality/Speed ratio modifier
+  --ovcopts=lossless=<int>                    Lossless mode
+  --ovcopts=tile-columns=<int>                Number of tile columns to use, log2
+  --ovcopts=tile-rows=<int>                   Number of tile rows to use, log2
+  --ovcopts=frame-parallel                    Enable frame parallel decodability features
+  --ovcopts=aq-mode=<int>                     adaptive quantization mode
+              [+-]none                        Aq not used
+              [+-]variance                    Variance based Aq
+              [+-]complexity                  Complexity based Aq
+              [+-]cyclic                      Cyclic Refresh Aq
+              [+-]equator360                  360 video Aq
+  --ovcopts=level=<float>                     Specify level
+  --ovcopts=row-mt                            Row based multi-threading
+  --ovcopts=tune-content=<int>                Tune content type
+              [+-]default                     Regular video content
+              [+-]screen                      Screen capture content
+              [+-]film                        Film content; improves grain retention
+  --ovcopts=corpus-complexity=<int>           corpus vbr complexity midpoint
+  --ovcopts=enable-tpl                        Enable temporal dependency model
+  --ovcopts=speed=<int>
+  --ovcopts=quality=<int>
+              [+-]best
+              [+-]good
+              [+-]realtime
+  --ovcopts=vp8flags=<flags>
+              [+-]error_resilient             enable error resilience
+              [+-]altref                      enable use of alternate reference frames (VP8/2-pass only)
+  --ovcopts=arnr_max_frames=<int>             altref noise reduction max frame count
+  --ovcopts=arnr_strength=<int>               altref noise reduction filter strength
+  --ovcopts=arnr_type=<int>                   altref noise reduction filter type
+  --ovcopts=rc_lookahead=<int>                Number of frames to look ahead for alternate reference frame selection
+  --ovcopts=sharpness=<int>                   Increase sharpness at the expense of lower PSNR
+Additionally, for --ovc=libx264:
+  --ovcopts=preset=<string>                   Set the encoding preset (cf. x264 --fullhelp)
+  --ovcopts=tune=<string>                     Tune the encoding params (cf. x264 --fullhelp)
+  --ovcopts=profile=<string>                  Set profile restrictions (cf. x264 --fullhelp)
+  --ovcopts=fastfirstpass                     Use fast settings when encoding first pass
+  --ovcopts=level=<string>                    Specify level (as defined by Annex A)
+  --ovcopts=passlogfile=<string>              Filename for 2 pass stats
+  --ovcopts=wpredp=<string>                   Weighted prediction for P-frames
+  --ovcopts=a53cc                             Use A53 Closed Captions (if available)
+  --ovcopts=x264opts=<string>                 x264 options
+  --ovcopts=crf=<float>                       Select the quality for constant quality mode
+  --ovcopts=crf_max=<float>                   In CRF mode, prevents VBV from lowering quality beyond this point.
+  --ovcopts=qp=<int>                          Constant quantization parameter rate control method
+  --ovcopts=aq-mode=<int>                     AQ method
+              [+-]none
+              [+-]variance                    Variance AQ (complexity mask)
+              [+-]autovariance                Auto-variance AQ
+              [+-]autovariance-biased         Auto-variance AQ with bias to dark scenes
+  --ovcopts=aq-strength=<float>               AQ strength. Reduces blocking and blurring in flat and textured areas.
+  --ovcopts=psy                               Use psychovisual optimizations.
+  --ovcopts=psy-rd=<string>                   Strength of psychovisual optimization, in <psy-rd>:<psy-trellis> format.
+  --ovcopts=rc-lookahead=<int>                Number of frames to look ahead for frametype and ratecontrol
+  --ovcopts=weightb                           Weighted prediction for B-frames.
+  --ovcopts=weightp=<int>                     Weighted prediction analysis method.
+              [+-]none
+              [+-]simple
+              [+-]smart
+  --ovcopts=ssim                              Calculate and print SSIM stats.
+  --ovcopts=intra-refresh                     Use Periodic Intra Refresh instead of IDR frames.
+  --ovcopts=bluray-compat                     Bluray compatibility workarounds.
+  --ovcopts=b-bias=<int>                      Influences how often B-frames are used
+  --ovcopts=b-pyramid=<int>                   Keep some B-frames as references.
+              [+-]none
+              [+-]strict                      Strictly hierarchical pyramid
+              [+-]normal                      Non-strict (not Blu-ray compatible)
+  --ovcopts=mixed-refs                        One reference per partition, as opposed to one reference per macroblock
+  --ovcopts=8x8dct                            High profile 8x8 transform.
+  --ovcopts=fast-pskip
+  --ovcopts=aud                               Use access unit delimiters.
+  --ovcopts=mbtree                            Use macroblock tree ratecontrol.
+  --ovcopts=deblock=<string>                  Loop filter parameters, in <alpha:beta> form.
+  --ovcopts=cplxblur=<float>                  Reduce fluctuations in QP (before curve compression)
+  --ovcopts=partitions=<string>               A comma-separated list of partitions to consider. Possible values: p8x8, p4x4, b8x8, i8x8, i4x4, none, all
+  --ovcopts=direct-pred=<int>                 Direct MV prediction mode
+              [+-]none
+              [+-]spatial
+              [+-]temporal
+              [+-]auto
+  --ovcopts=slice-max-size=<int>              Limit the size of each slice in bytes
+  --ovcopts=stats=<string>                    Filename for 2 pass stats
+  --ovcopts=nal-hrd=<int>                     Signal HRD information (requires vbv-bufsize; cbr not allowed in .mp4)
+              [+-]none
+              [+-]vbr
+              [+-]cbr
+  --ovcopts=avcintra-class=<int>              AVC-Intra class 50/100/200/300/480
+  --ovcopts=me_method=<int>                   Set motion estimation method
+              [+-]dia
+              [+-]hex
+              [+-]umh
+              [+-]esa
+              [+-]tesa
+  --ovcopts=motion-est=<int>                  Set motion estimation method
+              [+-]dia
+              [+-]hex
+              [+-]umh
+              [+-]esa
+              [+-]tesa
+  --ovcopts=forced-idr                        If forcing keyframes, force them as IDR frames.
+  --ovcopts=coder=<int>                       Coder type
+              [+-]default
+              [+-]cavlc
+              [+-]cabac
+              [+-]vlc
+              [+-]ac
+  --ovcopts=b_strategy=<int>                  Strategy to choose between I/P/B-frames
+  --ovcopts=chromaoffset=<int>                QP difference between chroma and luma
+  --ovcopts=sc_threshold=<int>                Scene change threshold
+  --ovcopts=noise_reduction=<int>             Noise reduction
+  --ovcopts=x264-params                       Override the x264 configuration using a :-separated list of key=value parameters
+Additionally, for --ovc=h264_nvenc:
+  --ovcopts=preset=<int>                      Set the encoding preset
+              [+-]default
+              [+-]slow                        hq 2 passes
+              [+-]medium                      hq 1 pass
+              [+-]fast                        hp 1 pass
+              [+-]hp
+              [+-]hq
+              [+-]bd
+              [+-]ll                          low latency
+              [+-]llhq                        low latency hq
+              [+-]llhp                        low latency hp
+              [+-]lossless
+              [+-]losslesshp
+              [+-]p1                          fastest (lowest quality)
+              [+-]p2                          faster (lower quality)
+              [+-]p3                          fast (low quality)
+              [+-]p4                          medium (default)
+              [+-]p5                          slow (good quality)
+              [+-]p6                          slower (better quality)
+              [+-]p7                          slowest (best quality)
+  --ovcopts=tune=<int>                        Set the encoding tuning info
+              [+-]hq                          High quality
+              [+-]ll                          Low latency
+              [+-]ull                         Ultra low latency
+              [+-]lossless                    Lossless
+  --ovcopts=profile=<int>                     Set the encoding profile
+              [+-]baseline
+              [+-]main
+              [+-]high
+              [+-]high444p
+  --ovcopts=level=<int>                       Set the encoding level restriction
+              [+-]auto
+              [+-]1
+              [+-]1.0
+              [+-]1b
+              [+-]1.0b
+              [+-]1.1
+              [+-]1.2
+              [+-]1.3
+              [+-]2
+              [+-]2.0
+              [+-]2.1
+              [+-]2.2
+              [+-]3
+              [+-]3.0
+              [+-]3.1
+              [+-]3.2
+              [+-]4
+              [+-]4.0
+              [+-]4.1
+              [+-]4.2
+              [+-]5
+              [+-]5.0
+              [+-]5.1
+              [+-]5.2
+              [+-]6.0
+              [+-]6.1
+              [+-]6.2
+  --ovcopts=rc=<int>                          Override the preset rate-control
+              [+-]constqp                     Constant QP mode
+              [+-]vbr                         Variable bitrate mode
+              [+-]cbr                         Constant bitrate mode
+              [+-]vbr_minqp                   Variable bitrate mode with MinQP (deprecated)
+              [+-]ll_2pass_quality            Multi-pass optimized for image quality (deprecated)
+              [+-]ll_2pass_size               Multi-pass optimized for constant frame size (deprecated)
+              [+-]vbr_2pass                   Multi-pass variable bitrate mode (deprecated)
+              [+-]cbr_ld_hq                   Constant bitrate low delay high quality mode
+              [+-]cbr_hq                      Constant bitrate high quality mode
+              [+-]vbr_hq                      Variable bitrate high quality mode
+  --ovcopts=rc-lookahead=<int>                Number of frames to look ahead for rate-control
+  --ovcopts=surfaces=<int>                    Number of concurrent surfaces
+  --ovcopts=cbr                               Use cbr encoding mode
+  --ovcopts=2pass                             Use 2pass encoding mode
+  --ovcopts=gpu=<int>                         Selects which NVENC capable GPU to use. First GPU is 0, second is 1, and so on.
+              [+-]any                         Pick the first device available
+              [+-]list                        List the available devices
+  --ovcopts=delay=<int>                       Delay frame output by the given amount of frames
+  --ovcopts=no-scenecut                       When lookahead is enabled, set this to 1 to disable adaptive I-frame insertion at scene cuts
+  --ovcopts=forced-idr                        If forcing keyframes, force them as IDR frames.
+  --ovcopts=b_adapt                           When lookahead is enabled, set this to 0 to disable adaptive B-frame decision
+  --ovcopts=spatial-aq                        set to 1 to enable Spatial AQ
+  --ovcopts=spatial_aq                        set to 1 to enable Spatial AQ
+  --ovcopts=temporal-aq                       set to 1 to enable Temporal AQ
+  --ovcopts=temporal_aq                       set to 1 to enable Temporal AQ
+  --ovcopts=zerolatency                       Set 1 to indicate zero latency operation (no reordering delay)
+  --ovcopts=nonref_p                          Set this to 1 to enable automatic insertion of non-reference P-frames
+  --ovcopts=strict_gop                        Set 1 to minimize GOP-to-GOP rate fluctuations
+  --ovcopts=aq-strength=<int>                 When Spatial AQ is enabled, this field is used to specify AQ strength. AQ strength scale is from 1 (low) - 15 (aggressive)
+  --ovcopts=cq=<float>                        Set target quality level (0 to 51, 0 means automatic) for constant quality mode in VBR rate control
+  --ovcopts=aud                               Use access unit delimiters
+  --ovcopts=bluray-compat                     Bluray compatibility workarounds
+  --ovcopts=init_qpP=<int>                    Initial QP value for P frame
+  --ovcopts=init_qpB=<int>                    Initial QP value for B frame
+  --ovcopts=init_qpI=<int>                    Initial QP value for I frame
+  --ovcopts=qp=<int>                          Constant quantization parameter rate control method
+  --ovcopts=qp_cb_offset=<int>                Quantization parameter offset for cb channel
+  --ovcopts=qp_cr_offset=<int>                Quantization parameter offset for cr channel
+  --ovcopts=weighted_pred=<int>               Set 1 to enable weighted prediction
+  --ovcopts=coder=<int>                       Coder type
+              [+-]default
+              [+-]auto
+              [+-]cabac
+              [+-]cavlc
+              [+-]ac
+              [+-]vlc
+  --ovcopts=b_ref_mode=<int>                  Use B frames as references
+              [+-]disabled                    B frames will not be used for reference
+              [+-]each                        Each B frame will be used for reference
+              [+-]middle                      Only (number of B frames)/2 will be used for reference
+  --ovcopts=a53cc                             Use A53 Closed Captions (if available)
+  --ovcopts=dpb_size=<int>                    Specifies the DPB size used for encoding (0 means automatic)
+  --ovcopts=multipass=<int>                   Set the multipass encoding
+              [+-]disabled                    Single Pass
+              [+-]qres                        Two Pass encoding is enabled where first Pass is quarter resolution
+              [+-]fullres                     Two Pass encoding is enabled where first Pass is full resolution
+  --ovcopts=ldkfs=<int>                       Low delay key frame scale; Specifies the Scene Change frame size increase allowed in case of single frame VBV and CBR
+  --ovcopts=extra_sei                         Pass on extra SEI data (e.g. a53 cc) to be included in the bitstream
+  --ovcopts=intra-refresh                     Use Periodic Intra Refresh instead of IDR frames
+  --ovcopts=single-slice-intra-refresh        Use single slice intra refresh
+  --ovcopts=constrained-encoding              Enable constrainedFrame encoding where each slice in the constrained picture is independent of other slices
