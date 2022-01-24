@@ -1,0 +1,1 @@
+basically wholesale ganked from [LightArrowsEXE](https://github.com/LightArrowsEXE/dotfiles/tree/master/mpv/.config/mpv) and [Moodkiller's](https://github.com/Moodkiller/MPV-Made-Easy/tree/master/mpv) repos. my eternal thanks to them. especially light, you're much too kind to me.
