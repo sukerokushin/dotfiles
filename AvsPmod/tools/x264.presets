@@ -1,8 +1,14 @@
-[Booru HD/Web]
-x264.exe --preset slower --crf 15 --tune animation --aq-mode 3 --sar $par_x:$par_y --output-depth 8 --output-csp i420 --colorprim bt709 --transfer bt709 --colormatrix bt709 --output "$video_output" "$video_input"
+[Booru HD/web]
+x264.exe --preset placebo --crf 15 --tune animation --aq-mode 3 --sar $par_x:$par_y --output-depth 8 --output-csp i420 --colorprim bt709 --transfer bt709 --colormatrix bt709 --output "$video_output" "$video_input"
 
 [Booru SD/DVD]
-x264.exe --preset veryslow --crf 15 --tune animation --aq-mode 3 --sar $par_x:$par_y --output-depth 8 --output-csp i420 --colorprim smpte170m --transfer smpte170m --colormatrix smpte170m --output "$video_output" "$video_input" 
+x264.exe --preset placebo --crf 15 --tune animation --aq-mode 3 --sar $par_x:$par_y --output-depth 8 --output-csp i420 --colorprim smpte170m --transfer smpte170m --colormatrix smpte170m --output "$video_output" "$video_input" 
+
+[Booru lossless HD/web]
+x264.exe --preset ultrafast --qp 0 --sar $par_x:$par_y --colorprim bt709 --transfer bt709 --colormatrix bt709 --output "$video_output" "$video_input"
+
+[Booru lossless SD/DVD]
+x264.exe --preset ultrafast --qp 0 --sar $par_x:$par_y --colorprim smpte170m --transfer smpte170m --colormatrix smpte170m --output "$video_output" "$video_input"
 
 [2 Pass Very Slow]
 x264.exe --pass 1 --preset veryslow --bitrate $video_bitrate --zones $credits_frame,$last_frame,q=40 $extra_options --output NUL "$video_input"
