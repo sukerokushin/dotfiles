@@ -1,4 +1,4 @@
-basically wholesale ganked from [LightArrowsEXE](https://github.com/LightArrowsEXE/dotfiles/tree/master/mpv/.config/mpv) and [Moodkiller's](https://github.com/Moodkiller/MPV-Made-Easy/tree/master/mpv) repos. my eternal thanks to them. especially light, you're much too kind to me.
+basically ganked from [LightArrowsEXE](https://github.com/LightArrowsEXE/dotfiles/tree/master/mpv/.config/mpv) and [Moodkiller's](https://github.com/Moodkiller/MPV-Made-Easy/tree/master/mpv) repos. my eternal thanks to them. especially light, you're much too kind to me.
 
 ## How to install VapourSynth and the filtering dependencies
 
@@ -36,7 +36,8 @@ basically wholesale ganked from [LightArrowsEXE](https://github.com/LightArrowsE
 
 * [FSRCNNX](https://github.com/igv/FSRCNN-TensorFlow/releases)
 * [ravu-lite-r3](https://github.com/bjin/mpv-prescalers)
-* [SSimDownscaler and KrigBilateral](https://gist.github.com/igv)
+* [SSimDownscaler](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
+* [KrigBilateral](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [noise_static_luma](https://pastebin.com/yacMe6EZ)
 
 ### *For additional shaders and scripts, check out the following sources*
