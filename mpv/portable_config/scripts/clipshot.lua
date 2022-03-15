@@ -1,7 +1,7 @@
 --  Based on ObserverOfTime's clipshot.lua
 --  Original source: https://github.com/ObserverOfTime/mpv-scripts/blob/master/clipshot.lua
 --  Modified to save in png on Windows (tested) and Linux (untested, should work)
---  Commented out macOS block as I have no idea/guarantee it'll work, just use IINA
+--  Removed macOS block as I have no idea/guarantee it'll work
 
 NAME = 'mpv-screenshot.png'
 
@@ -19,22 +19,13 @@ else -- Unix
     SHOT = '/tmp/'..NAME
     -- os.getenv('OSTYPE') doesn't work
     local ostype = io.popen('printf "$OSTYPE"', 'r'):read()
-    -- if ostype:sub(1, 6) == 'darwin' then -- macOS
-    --     CMD = {
-    --         'osascript', '-e', ([[¬
-    --             set the clipboard to ( ¬
-    --                 read (POSIX file %q) as PNG picture ¬
-    --             ) ¬
-    --         ]]):format(SHOT)
-    --     }
-    -- else -- Linux/BSD
-        if os.getenv('XDG_SESSION_TYPE') == 'wayland' then -- Wayland
-            CMD = {'sh', '-c', ('wl-copy < %q'):format(SHOT)}
-        else -- Xorg
-            CMD = {'xclip', '-sel', 'c', '-t', 'image/PNG', '-i', SHOT}
-        end
+    if os.getenv('XDG_SESSION_TYPE') == 'wayland' then -- Wayland
+        CMD = {'sh', '-c', ('wl-copy < %q'):format(SHOT)}
+    else -- Xorg
+        CMD = {'xclip', '-sel', 'c', '-t', 'image/PNG', '-i', SHOT}
     end
 end
+
 
 function clipshot(arg)
     return function()
@@ -45,6 +36,6 @@ function clipshot(arg)
     end
 end
 
-mp.add_key_binding('Shift+F6',     'clipshot-subs',   clipshot('subtitles'))
-mp.add_key_binding('Shift+F5',     'clipshot-video',  clipshot('video'))
-mp.add_key_binding('Shift+F7', 'clipshot-window', clipshot('window'))
+mp.add_key_binding('Shift+F6',	'clipshot-subs',	clipshot('subtitles'))
+mp.add_key_binding('Shift+F5',	'clipshot-video',	clipshot('video'))
+mp.add_key_binding('Shift+F7',	'clipshot-window',	clipshot('window'))
