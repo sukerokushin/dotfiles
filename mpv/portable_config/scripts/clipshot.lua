@@ -1,5 +1,5 @@
---	Based on ObserverOfTime's clipshot.lua
---	Original source: https://github.com/ObserverOfTime/mpv-scripts/blob/master/clipshot.lua
+--  Based on ObserverOfTime's clipshot.lua
+--  Original source: https://github.com/ObserverOfTime/mpv-scripts/blob/master/clipshot.lua
 --  Modified to save in png on Windows (tested) and Linux (untested, should work)
 --  Commented out macOS block as I have no idea/guarantee it'll work, just use IINA
 
