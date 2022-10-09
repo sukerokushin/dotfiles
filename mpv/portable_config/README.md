@@ -17,13 +17,13 @@ basically ganked from [LightArrowsEXE](https://github.com/LightArrowsEXE/dotfile
 ### External programs and fonts
 
 * [yt-dlp](https://github.com/yt-dlp/yt-dlp/releases)
-* [Gandhi Sans](https://www.fontsquirrel.com/fonts/gandhi-sans) and [Source Sans Pro](https://github.com/adobe-fonts/source-sans)
+* [Lato](https://fonts.google.com/specimen/Lato) and [Source Sans Pro](https://github.com/adobe-fonts/source-sans)
 
 ### VapourSynth modules/plugins
 
-* [vsutil](https://pypi.org/project/vsutil)
 * [VIVTC](https://github.com/vapoursynth/vivtc)
 * [znedi3](https://github.com/sekrit-twc/znedi3)
+* [vsutil](https://pypi.org/project/vsutil)
 
 ### Scripts and shaders
 
@@ -35,7 +35,7 @@ basically ganked from [LightArrowsEXE](https://github.com/LightArrowsEXE/dotfile
 ### Shader files
 
 * [FSRCNNX](https://github.com/igv/FSRCNN-TensorFlow/releases)
-* [ravu-lite-r3](https://github.com/bjin/mpv-prescalers)
+* [NNEDI3 and ravu-lite-r3](https://github.com/bjin/mpv-prescalers)
 * [SSimDownscaler](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
 * [KrigBilateral](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [noise_static_luma](https://pastebin.com/yacMe6EZ)
