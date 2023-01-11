@@ -22,7 +22,7 @@ else -- Unix
     if os.getenv('XDG_SESSION_TYPE') == 'wayland' then -- Wayland
         CMD = {'sh', '-c', ('wl-copy < %q'):format(SHOT)}
     else -- Xorg
-        CMD = {'xclip', '-sel', 'c', '-t', 'image/PNG', '-i', SHOT}
+        CMD = {'xclip', '-sel', 'c', '-t', 'image/png', '-i', SHOT}
     end
 end
 
