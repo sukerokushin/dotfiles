@@ -20,6 +20,7 @@ playlistmanager.lua
 quality-menu.lua
 reload.lua
 show-stream-title.lua
+sponsorblock_minimal.lua
 sub-seek-two.lua
 switch-shader.js (one-character edit to fix split function)
 thumbfast.lua (https://github.com/po5/thumbfast/pull/173)
