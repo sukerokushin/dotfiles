@@ -17,6 +17,7 @@ mpv-youtube-chat.lua
 open-file-dialog.lua
 pause-when-minimize.lua
 playlistmanager.lua
+progressbar.lua
 quality-menu.lua
 reload.lua
 show-stream-title.lua
