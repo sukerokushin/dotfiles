@@ -1,0 +1,35 @@
+mpv-twitch-chat-irc (in folder, script renamed to main.lua)
+audio_background.lua
+autocrop.lua
+autodeint.lua
+betterchapters.lua
+blackout.lua
+bluetooth-auto-audio-latency.lua
+chapter-converter.lua
+clipshot.lua (edited to save as png)
+copy-paste-url.lua
+cycle-deinterlace-pullup.lua
+cycle-profile.lua
+exit-fullscreen.lua
+mpv_crop_script.lua (https://github.com/TheAMM/mpv_crop_script/pull/7)
+mpv-twitch-chat.lua
+mpv-youtube-chat.lua
+open-file-dialog.lua
+pause-when-minimize.lua
+playlistmanager.lua
+quality-menu.lua
+reload.lua
+show-stream-title.lua
+sub-seek-two.lua
+switch-shader.js (one-character edit to fix split function)
+thumbfast.lua (https://github.com/po5/thumbfast/pull/173)
+trim.lua
+UndoRedo.lua
+webm.lua
+
+Linux:
++ mpv-mpris
++ kde-night-color
++ kde-do-not-disturb
++ kdialog-open-files.lua
+- open-file-dialog.lua
