@@ -2,6 +2,7 @@ mpv-twitch-chat-irc (in folder, script renamed to main.lua)
 audio_background.lua
 autocrop.lua
 autodeint.lua
+autoload.lua
 betterchapters.lua
 blackout.lua
 bluetooth-auto-audio-latency.lua
@@ -11,13 +12,13 @@ copy-paste-url.lua
 cycle-deinterlace-pullup.lua
 cycle-profile.lua
 exit-fullscreen.lua
+mfpbar.lua (merge between original codeberg repo and github `mfpbar-drag` fork
 mpv_crop_script.lua (https://github.com/TheAMM/mpv_crop_script/pull/7)
 mpv-twitch-chat.lua
 mpv-youtube-chat.lua
 open-file-dialog.lua
 pause-when-minimize.lua
 playlistmanager.lua
-progressbar.lua
 quality-menu.lua
 reload.lua
 show-stream-title.lua
@@ -25,6 +26,7 @@ sponsorblock_minimal.lua
 sub-seek-two.lua
 switch-shader.js (one-character edit to fix split function)
 thumbfast.lua (https://github.com/po5/thumbfast/pull/173)
+thumbyt.lua
 trim.lua
 UndoRedo.lua
 webm.lua
